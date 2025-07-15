@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.jeremylafaver.net/sitemap.xml 
