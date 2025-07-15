@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Jeremy LaFaver</title>
+  <meta name="description" content="Contact Jeremy LaFaver for SEO, web design, and digital solutions.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-logo">
+      <a href="index.html"><img src="images/logo/logomain.png" alt="Jeremy LaFaver Logo" class="header-logo-img"></a>
+      <span class="header-logo-text">JAX OF ALL TRADES</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">MY STORY</a>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+    <a href="index.html#quoteModalBackdrop" class="header-cta" onclick="openModal();return false;">FREE QUOTE</a>
+  </header>
+  <main class="container" style="max-width: 500px; margin-top: 2.5rem;">
+    <h1>Contact Me</h1>
+    <p>Have a project in mind, need a quote, or just want to say hello? Ask about the Free website and site analysis. Fill out the form below and I'll get back to you as soon as possible.</p>
+    <form class="enquiry-form" action="https://formspree.io/f/mzzvpnzj" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <label for="website">Website</label>
+      <input type="url" id="website" name="website" placeholder="Your Website">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="How can I help you?" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div style="margin-top:2rem; text-align:center;">
+      <a href="index.html" class="hero-btn">&#8592; Back to Home</a>
+    </div>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html> 

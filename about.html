@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Jeremy LaFaver | Jax of All Trades</title>
+  <meta name="description" content="Meet Jeremy LaFaver, Utah’s multi-skilled digital and tech freelancer, specializing in SEO, web development, graphic design, and more.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; background: #181818; color: #fff; margin: 0; }
+    .modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal {
+      background: #181818;
+      color: #fff;
+      border-radius: 16px;
+      max-width: 420px;
+      width: 90vw;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      padding: 2.2rem 2rem 1.5rem 2rem;
+      position: relative;
+      text-align: center;
+      z-index: 1001;
+      animation: modalIn 0.3s cubic-bezier(.4,2,.6,1) 1;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(-40px) scale(0.95); }
+      to { opacity: 1; transform: none; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .modal-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .modal-desc {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+      color: #eee;
+    }
+    .modal-form input, .modal-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #232323;
+      color: #fff;
+    }
+    .modal-form input::placeholder, .modal-form textarea::placeholder {
+      color: #bbb;
+    }
+    .modal-form button {
+      background: #ffb300;
+      color: #181818;
+      border: none;
+      border-radius: 22px;
+      padding: 0.7rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 0.5rem;
+    }
+    .modal-form button:hover {
+      background: #ffd700;
+    }
+    .modal-note {
+      font-size: 0.92rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+    .main-header {
+      background: #181818;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 2.5vw;
+      min-height: 70px;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .header-logo img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      flex: 1 1 auto;
+      justify-content: center;
+    }
+    .header-nav a, .header-nav .dropdown-btn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.08rem;
+      letter-spacing: 0.01em;
+      position: relative;
+      padding: 0.2rem 0.5rem;
+      transition: color 0.2s;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .header-nav a:hover, .header-nav .dropdown-btn:hover {
+      color: #ffd700;
+    }
+    .header-nav .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .header-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 2.2rem;
+      background: #232323;
+      min-width: 200px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      border-radius: 8px;
+      z-index: 1002;
+      padding: 0.5rem 0;
+    }
+    .header-nav .dropdown-content a {
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      display: block;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      text-align: left;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header-nav .dropdown-content a:hover {
+      background: #181818;
+      color: #ffd700;
+    }
+    .header-nav .dropdown:hover .dropdown-content,
+    .header-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+    .header-cta {
+      background: #ffb300;
+      color: #181818;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 22px;
+      padding: 0.7rem 2.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      margin-left: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: inline-block;
+    }
+    .header-cta:hover {
+      background: #ffd700;
+      color: #181818;
+    }
+    @media (max-width: 900px) {
+      .header-nav { gap: 1.1rem; }
+      .header-cta { padding: 0.6rem 1.2rem; font-size: 0.98rem; }
+    }
+    @media (max-width: 600px) {
+      .main-header { flex-direction: column; align-items: stretch; padding: 0.5rem 1vw; }
+      .header-logo { justify-content: center; margin-bottom: 0.5rem; }
+      .header-nav { flex-wrap: wrap; gap: 0.7rem; }
+      .header-cta { margin: 0.7rem auto 0 auto; display: block; width: 100%; }
+    }
+    .about-hero { background: linear-gradient(90deg, #232323 60%, #181818 100%); color: #ffd700; text-align: center; padding: 3.5rem 0 2.5rem 0; }
+    .about-hero-img { display: block; margin: 0 auto 1.2rem auto; background: #232323; max-width: 220px; max-height: 220px; width: 100%; height: auto; object-fit: contain; border: none; border-radius: 0; }
+    .about-hero-title { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; color: #ffd700; }
+    .about-hero-subtitle { font-size: 1.3rem; font-weight: 600; color: #fff; margin-bottom: 1.2rem; }
+    .about-hero-desc { font-size: 1.1rem; color: #fff; max-width: 600px; margin: 0 auto 1.5rem auto; }
+    .about-section { max-width: 900px; margin: 2.5rem auto; background: #232323; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.13); padding: 2.5rem 2rem; }
+    .about-timeline { margin-bottom: 2.5rem; }
+    .timeline-title { color: #ffd700; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; }
+    .timeline-list { list-style: none; padding: 0; margin: 0; }
+    .timeline-list li { margin-bottom: 1.1rem; position: relative; padding-left: 1.5rem; }
+    .timeline-list li:before { content: '•'; color: #ffd700; position: absolute; left: 0; font-size: 1.2rem; top: 0.1rem; }
+    .about-skills { margin-bottom: 2.5rem; }
+    .skills-title { color: #ffd700; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; }
+    .skill-badge { background: #181818; color: #ffd700; border-radius: 18px; padding: 0.6rem 1.3rem; font-weight: 700; font-size: 1.05rem; box-shadow: 0 2px 8px rgba(0,0,0,0.10); }
+    .about-testimonials { margin-bottom: 2.5rem; }
+    .testimonials-title { color: #ffd700; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; }
+    .testimonial { background: #181818; color: #fff; border-radius: 12px; padding: 1.2rem 1.5rem; margin-bottom: 1.2rem; font-style: italic; box-shadow: 0 2px 8px rgba(0,0,0,0.10); }
+    .testimonial cite { display: block; color: #ffd700; font-size: 1rem; margin-top: 0.5rem; font-style: normal; }
+    .about-cta { text-align: center; margin-top: 2.5rem; }
+    .about-cta a, .about-cta button { background: #ffb300; color: #181818; font-weight: 700; border-radius: 22px; padding: 0.8rem 2.2rem; text-decoration: none; font-size: 1.15rem; margin: 0 0.7rem; display: inline-block; transition: background 0.2s; }
+    .about-cta a:hover, .about-cta button:hover { background: #ffd700; }
+    @media (max-width: 600px) { .about-hero-title { font-size: 1.8rem; } .about-hero-subtitle { font-size: 1.1rem; } .about-hero-desc { font-size: 1rem; } .about-section { padding: 1.2rem 0.5rem; } .about-cta a, .about-cta button { padding: 0.7rem 1.5rem; font-size: 1rem; } }
+  </style>
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div style="background:#ffd700; color:#181818; text-align:center; font-weight:700; padding:0.7rem 0; letter-spacing:0.03em; font-size:1.08rem;">
+    ⭐ <span style="color:#232323;">I will <u>match any price</u> for all my Services</span> ⭐
+  </div>
+
+  <!-- Quote Modal -->
+  <div id="quoteModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+      <img src="images/logo/logomain.png" alt="Jeremy LaFaver" class="modal-logo">
+      <div class="modal-title">Get a Free Quote</div>
+      <div class="modal-desc">Want to know how I can help your business grow? Get a personalized quote for SEO, Web Development, or Tech Services. Fill out the form below and I'll get back to you soon!</div>
+      <form class="modal-form" action="https://formspree.io/f/mzzvpnzj" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="How can I help you?" rows="3" required></textarea>
+        <button type="submit">Request My Quote</button>
+      </form>
+      <div class="modal-note">Your information is secure.</div>
+    </div>
+  </div>
+
+  <!-- Call Me Modal -->
+  <div id="callMeModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal" style="max-width:340px;">
+      <button class="modal-close" onclick="closeCallMeModal()" aria-label="Close">×</button>
+      <div class="modal-title" style="margin-top:1rem;">Call Me Now</div>
+      <div style="font-size:1.3rem; font-weight:700; margin:1.2rem 0; color:#ffd700;">385-216-2993</div>
+      <a href="tel:3852162993" onclick="setTimeout(closeCallMeModal, 300);" style="background:#ffd700; color:#181818; font-weight:700; border-radius:22px; padding:0.7rem 2.2rem; text-decoration:none; font-size:1.15rem; display:inline-block;">Tap to Call</a>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="header-logo">
+      <img src="images/logo/logomain.png" alt="Jeremy LaFaver Logo">
+      <span style="font-size:1.1rem; font-weight:500; letter-spacing:0.1em;">JAX OF ALL TRADES</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">START HERE</a>
+      <a href="blog.html">BLOG</a>
+      <a href="about.html">MY STORY</a>
+      <a href="#">CONTACT</a>
+    </nav>
+    <a href="#" class="header-cta" onclick="openModal();return false;">FREE QUOTE</a>
+  </header>
+
+  <section class="about-hero">
+    <img src="images/logomain1.png" alt="Jeremy LaFaver" class="about-hero-img" onerror="this.onerror=null;this.src='images/logo/logomain1.png';">
+    <div class="about-hero-title">Javascript and XML</div>
+    <div class="about-hero-subtitle">The Jax Of All Trades</div>
+    <div class="about-hero-desc">Utah-based digital and tech freelancer. SEO, web development, design, and more—decades of expertise, creative solutions, and a passion for helping businesses and people shine.</div>
+  </section>
+
+  <section class="about-section about-timeline">
+    <div class="timeline-title">My Journey</div>
+    <ul class="timeline-list">
+      <li><strong>Early Passion:</strong> At 6, I was the first kid in the computer lab every morning, hooked on floppy disk games and the magic of technology.</li>
+      <li><strong>Teen Years:</strong> Self-taught in Visual Basic and C++, building tools for early internet communities and learning from open-source code.</li>
+      <li><strong>90s Internet:</strong> Rode the digital wave from AOL’s first browsers, building for the underground and learning the power of online connection.</li>
+      <li><strong>Corporate Leadership:</strong> In my 30s, I worked the corporate life as a General Manager and then District Manager, mentoring over 180 employess and locations—gaining valuable leadership and business experience.</li>
+      <li><strong>Resilience:</strong> Life threw challenges my way, but my love for tech never faded. I kept learning, adapting, and growing.</li>
+      <li><strong>Today:</strong> At 42, I’m a husband, father of three, and proud freelancer—spending endless hours a day mastering new tools and delivering results for clients in every niche.</li>
+    </ul>
+  </section>
+
+  <section class="about-section about-skills">
+    <div class="skills-title">What I Do</div>
+    <div class="skills-list">
+      <span class="skill-badge">SEO & Local SEO</span>
+      <span class="skill-badge">Web Development</span>
+      <span class="skill-badge">Graphic Design</span>
+      <span class="skill-badge">Content Writing</span>
+      <span class="skill-badge">Tech Support</span>
+      <span class="skill-badge">Branding</span>
+      <span class="skill-badge">AI Tools</span>
+      <span class="skill-badge">Prompt Engineering (ChatGPT, Claude, DeepSeek, etc.)</span>
+      <span class="skill-badge">Prompt Workflows (Text, Image, Video)</span>
+      <span class="skill-badge">Image and Video Generation</span>
+      <span class="skill-badge">Social Media</span>
+      <span class="skill-badge">Upscaling</span>
+    </div>
+  </section>
+
+  <section class="about-section about-testimonials">
+    <div class="testimonials-title">Why Work With Me?</div>
+    <div class="testimonial">“Laflava Flav is the real deal! He built my website and handled my SEO—my business has never been busier.”<cite>— Sarah M., Ogden</cite></div>
+    <div class="testimonial">“Jeremy introduced me to a whole new world of technology and I am so grateful!”<cite>— James Z., Salt Lake City</cite></div>
+    <div class="testimonial">“Jeremy’s logo and banner designs made my brand stand out. Highly recommend!”<cite>— Scott K., Murray</cite></div>
+  </section>
+
+  <div class="about-cta">
+    <a href="tel:3852162993">Call Now</a>
+    <a href="#" onclick="openModal();return false;">Get a Free Quote</a>
+    <a href="index.html#services">See My Services</a>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('quoteModalBackdrop').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('quoteModalBackdrop').style.display = 'none';
+    }
+    function openCallMeModal() {
+      document.getElementById('callMeModalBackdrop').style.display = 'flex';
+    }
+    function closeCallMeModal() {
+      document.getElementById('callMeModalBackdrop').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeremy LaFaver: SEO & Tech Solutions</title>
+  <meta name="description" content="SEO strategies, Web Development, Computer Repair, Graphic Design, and Social Media Management by Jeremy LaFaver.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    ⭐ <span>I will <u>match any price</u> for all my Services</span> ⭐
+  </div>
+  <!-- Clicky Ad Section -->
+  <section class="clicky-ad">
+    <div class="clicky-ad-title">Unlock Your Digital Success with a True Tech & Creative Pro!</div>
+    <div>
+      <span>🔧 Worried about the cost? <span>I’ll match any price for computer repair, web design, SEO, and more!</span></span>
+    </div>
+    <div>
+      <span>🌐 Want a killer website? <span>Let me build you a sleek, user-friendly site that stands out from the crowd.</span></span>
+    </div>
+    <div>
+      <span>🎨 Need a logo or blog content? <span>I deliver creative designs and engaging articles that get noticed.</span></span>
+    </div>
+    <div class="clicky-ad-subtitle">
+      One call or click solves it all — your all-in-one online expert is here.
+    </div>
+    <div class="clicky-ad-ready">
+      <span>Ready to get started? 🚀</span>
+    </div>
+    <div class="clicky-ad-actions">
+      <button class="clicky-ad-btn" onclick="openCallMeModal()">Call Me Now</button>
+      <a href="mailto:jeremy@jeremylafaver.net" class="clicky-ad-btn">Email Me</a>
+    </div>
+  </section>
+  <!-- Modal Popup -->
+  <div id="quoteModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+      <img src="images/logo/logomain.png" alt="Jeremy LaFaver" class="modal-logo">
+      <div class="modal-title">Get a Free Quote</div>
+      <div class="modal-desc">Want to know how I can help your business grow? Get a personalized quote for SEO, Web Development, or Tech Services. Fill out the form below and I'll get back to you soon!</div>
+      <form class="modal-form" action="https://formspree.io/f/mzzvpnzj" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="How can I help you?" rows="3" required></textarea>
+        <button type="submit">Request My Quote</button>
+      </form>
+      <div class="modal-note">Your information is secure.</div>
+    </div>
+  </div>
+  <!-- Call Me Modal -->
+  <div id="callMeModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal" style="max-width:340px;">
+      <button class="modal-close" onclick="closeCallMeModal()" aria-label="Close">&times;</button>
+      <div class="modal-title call-me-title">Call Me Now</div>
+      <div class="call-me-number">385-216-2993</div>
+      <a href="tel:3852162993" onclick="setTimeout(closeCallMeModal, 300);" class="call-me-btn">Tap to Call</a>
+    </div>
+  </div>
+  <!-- Modern Header -->
+  <header class="main-header">
+    <div class="header-logo">
+      <img src="images/logo/logomain.png" alt="Jeremy LaFaver Logo" class="header-logo-img">
+      <span class="header-logo-text">JAX OF ALL TRADES</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#">START HERE</a>
+      <div class="dropdown">
+        <button class="dropdown-btn">PRODUCTS &#9662;</button>
+        <div class="dropdown-content">
+          <a href="#">SEO Audit Tool</a>
+          <a href="#">Website Builder</a>
+          <a href="#" id="brand-kit-link">Brand Kit: Social Spark</a>
+        </div>
+      </div>
+      <a href="about.html">MY STORY</a>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="#" class="header-cta" onclick="openModal();return false;">FREE QUOTE</a>
+  </header>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <div class="hero-title">Jax of All Trades: Utah’s Ultimate Digital & Tech Freelancer</div>
+        <div class="hero-desc hero-highlight">One call or click solves it all.</div>
+        <div class="hero-desc">Serving Utah & Beyond | Price Match Guarantee on All Services</div>
+        <div class="hero-actions">
+          <a href="#services" class="hero-btn">See My Services</a>
+          <a href="#" onclick="openModal();return false;" class="hero-btn hero-btn-outline">Get a Free Quote</a>
+          <a href="tel:3852162993" class="hero-btn hero-btn-accent">Call Now</a>
+        </div>
+        <div class="hero-desc hero-muted">Top-rated, multi-skilled, and ready to help you shine online and offline.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLICKY SERVICES GRID SECTION -->
+  <section id="services" class="services-grid">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div class="services-grid-title">What Can I Do For You?</div>
+      <div class="services-grid-list">
+        <!-- Design & Branding -->
+        <div class="services-card">
+          <div class="services-card-icon">🎨</div>
+          <div class="services-card-title">Design & Branding</div>
+          <div class="services-card-desc">Logos, graphic design, t-shirt/banner/poster design, image & old photo repair, upscaling</div>
+          <a href="#" onclick="openModal();return false;" class="services-btn">Get Creative Help</a>
+        </div>
+        <!-- Content & Marketing -->
+        <div class="services-card">
+          <div class="services-card-icon">📈</div>
+          <div class="services-card-title">Content & Marketing</div>
+          <div class="services-card-desc">SEO, blog articles, writing, copyrighting, guest posting, backlink building, site optimization</div>
+          <a href="#" onclick="openModal();return false;" class="services-btn">Boost My Business</a>
+        </div>
+        <!-- Web & App Development -->
+        <div class="services-card">
+          <div class="services-card-icon">💻</div>
+          <div class="services-card-title">Web & App Development</div>
+          <div class="services-card-desc">Website building, app building, web design, AI prompt engineering, prompt workflows for image & video generation</div>
+          <a href="#" onclick="openModal();return false;" class="services-btn">Start My Project</a>
+        </div>
+        <!-- Media Production -->
+        <div class="services-card">
+          <div class="services-card-icon">🎬</div>
+          <div class="services-card-title">Media Production</div>
+          <div class="services-card-desc">Video upscaling, audio/video editing, AI video/image prompt workflows</div>
+          <a href="#" onclick="openModal();return false;" class="services-btn">Edit My Media</a>
+        </div>
+        <!-- Tech Services -->
+        <div class="services-card">
+          <div class="services-card-icon">🛠️</div>
+          <div class="services-card-title">Tech Services</div>
+          <div class="services-card-desc">Computer repair, consulting, and more</div>
+          <a href="tel:3852162993" class="services-btn">Fix My Tech</a>
+        </div>
+      </div>
+      <div class="services-grid-footer">
+        <span class="services-grid-brand">Jax of All Trades</span> — Your Local & Online Digital Expert
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="portfolio-section">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div class="portfolio-section-title">My Work</div>
+      <div class="portfolio-list">
+        <!-- Example Portfolio Items (replace with your real work) -->
+        <div class="portfolio-card" id="logo-design-card">
+          <img src="images/pexels-karolina-grabowska-5717760.jpg" alt="Logo Design" class="portfolio-img">
+          <div class="portfolio-card-title">Logo Design</div>
+          <div class="portfolio-card-desc">Modern, memorable logos for brands and businesses.</div>
+        </div>
+        <div class="portfolio-card" id="website-build-card">
+          <img src="images/pexels-goumbik-669619.jpg" alt="Website Build" class="portfolio-img">
+          <div class="portfolio-card-title">Website Build</div>
+          <div class="portfolio-card-desc">Sleek, user-friendly websites that get results. In just a couple hours...</div>
+        </div>
+        <div class="portfolio-card">
+          <img src="images/pexels-kindelmedia-7688336.jpg" alt="Banner Design" class="portfolio-img">
+          <div class="portfolio-card-title">Prompt Workflows</div>
+          <div class="portfolio-card-desc">Crafting, refining, and optimizing inputs (prompts) for models to achieve specific, desired outputs.</div>
+        </div>
+        <div class="portfolio-card">
+          <img src="images/pexels-marketingtuig-185576.jpg" alt="SEO & Blog Writing" class="portfolio-img">
+          <div class="portfolio-card-title">SEO & Blog Writing</div>
+          <div class="portfolio-card-desc">Content and Keywords that rank on all browsers and engages your audience.</div>
+        </div>
+        <div class="portfolio-card">
+          <img src="images/insights.png" alt="Photo Repair" class="portfolio-img">
+          <div class="portfolio-card-title">Social Media Management</div>
+          <div class="portfolio-card-desc">Whether you need Pinterest marketing, Instagram growth, or TikTok monetization, I offer personalized support that turns your social media into a true business asset.</div>
+        </div>
+        <div class="portfolio-card">
+          <img src="images/blobid0.png" alt="TrainerRoad Blog" class="portfolio-img">
+          <div class="portfolio-card-title">TrainerRoad Blog</div>
+          <div class="portfolio-card-desc">Blog Guest Posts. Helped turn 80% of site views to the blog within 2 months.</div>
+          <a href="https://www.trainerroad.com/" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="\images\sponsors\Untitled design (3).png" alt="SportSam Events Blog" class="portfolio-img">
+          <div class="portfolio-card-title">SportSam Events Blog</div>
+          <div class="portfolio-card-desc">Created the blog for SEO and AI tools.</div>
+          <a href="https://sportsamevents.com/blog" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="\images\logo\logo.png" alt="DeepThink SEO" class="portfolio-img">
+          <div class="portfolio-card-title">DeepThink SEO</div>
+          <div class="portfolio-card-desc">Created for SEO and AI tools.</div>
+          <a href="https://www.deepthinkseo.online" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="images/sponsors/KJKJ.png" alt="Cold Turkey Run" class="portfolio-img">
+          <div class="portfolio-card-title">Cold Turkey Run</div>
+          <div class="portfolio-card-desc">Created for a yearly event that gets over 3000% increase a year.</div>
+          <a href="https://www.coldturkeyrun.com" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="\images\sportsamerica.png" alt="Sports America Events" class="portfolio-img">
+          <div class="portfolio-card-title">Sports America Events</div>
+          <div class="portfolio-card-desc">Created for local sporting event company. Brought domain rating from a 0 to a 8 in 1 week.</div>
+          <a href="https://sportsamericaevents.com" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="\images\hero-topaz-sharpen.webp" alt="Steezy Cartel" class="portfolio-img">
+          <div class="portfolio-card-title">Steezy Cartel</div>
+          <div class="portfolio-card-desc">Simple Personal Music Page.</div>
+          <a href="https://steezycartel.vercel.app" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="images/sponsors/gmc_SummitUrology_pms-1-e1552413647306.png" alt="Utah Prostate Cancer Run" class="portfolio-img">
+          <div class="portfolio-card-title">Utah Prostate Cancer Run</div>
+          <div class="portfolio-card-desc">Created for a local event for a hospital. Website for local event with unlimited revisions $499</div>
+          <a href="https://utahprostatecancerrun.com" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="\images\logo\logo.png" alt="DeepThink AI" class="portfolio-img">
+          <div class="portfolio-card-title">DeepThink AI</div>
+          <div class="portfolio-card-desc">My personal apps that I developed myself. (Only turned on during peak hours)</div>
+          <a href="https://deepthinkai.app" target="_blank" rel="noopener" class="portfolio-link">Visit Site</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Website Build Modal -->
+  <div id="websiteBuildModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal">
+      <button class="modal-close" onclick="closeWebsiteBuildModal()" aria-label="Close">&times;</button>
+      <div class="modal-title">What You Will Receive</div>
+      <ul class="modal-list">
+        <li>Original hand crafted website (no templates are used here)</li>
+        <li>On time delivery (or early)</li>
+        <li>On budget</li>
+        <li>On point (according to brand colors, fonts, or styling) <br><span class="modal-note">Don't have this yet? I can still help.</span></li>
+      </ul>
+      <div class="modal-title" style="margin-top:1.2rem;">What can I do?</div>
+      <ul class="modal-list">
+        <li>Attractive and high-quality designs</li>
+        <li>Full mobile optimization</li>
+        <li>Image & font styling</li>
+        <li>Custom slideshows</li>
+        <li>Blog editing and design</li>
+        <li>SEO optimization</li>
+        <li>Full site transfers</li>
+        <li>eCommerce integration</li>
+        <li>Full site upgrades</li>
+        <li>High-level animation/video integration</li>
+        <li>In website 3rd party integration</li>
+        <li>And Unlimited Revisions!</li>
+      </ul>
+      <div class="modal-title" style="margin-top:1.2rem;">Please Note:</div>
+      <ul class="modal-list">
+        <li>Domain Hosting is extra</li>
+        <li>Writing content is extra</li>
+      </ul>
+      <div class="modal-desc" style="margin-top:1.2rem;">I work closely with my customers for the best experience. You won't find the same care then you will with CS so feel free to message me now!</div>
+    </div>
+  </div>
+
+  <!-- Social Media Management Modal -->
+  <div id="socialMediaModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal">
+      <button class="modal-close" onclick="closeSocialMediaModal()" aria-label="Close">&times;</button>
+      <div class="modal-title">Social Media Management</div>
+      <div class="modal-desc">Don't settle for average, work with a pro who blends strategy, storytelling, and content creation to grow your business online.</div>
+      <div class="modal-desc" style="margin-bottom:0.7rem;">Jeremy is a <b>PRO Verified</b> social media manager, content creator, and digital marketing manager with over 15 years of experience. I help brands and creators grow through strategic social media marketing and standout visuals.</div>
+      <div class="modal-desc" style="margin-bottom:1.2rem;">Whether you need Pinterest marketing, Instagram growth, or TikTok monetization, I offer personalized support that turns your social media into a true business asset.</div>
+      <div class="modal-title" style="margin-top:1.2rem;">SERVICES:</div>
+      <ul class="modal-list">
+        <li>Profile Optimization & Brand Theme (colors & fonts)</li>
+        <li>Content Creation & Custom Graphic Design</li>
+        <li>High-quality posts with Your Logo & Website</li>
+        <li>Reels, Story Highlights, Pins, & Short Videos to Drive Interaction</li>
+        <li>Hashtag Research & SEO Captions</li>
+        <li>SM Kit: BIO, Banners, Covers</li>
+        <li>Scheduling & Consistent Posting</li>
+        <li>Tailored Strategies for Audience Engagement</li>
+        <li>Unlimited Revisions & Ongoing Support</li>
+      </ul>
+      <div class="modal-title" style="margin-top:1.2rem;">Perfect for:</div>
+      <div class="modal-desc">Creators needing a reliable Instagram or TikTok manager, and brands seeking standout social media content, content marketing, or monthly management.</div>
+      <div class="modal-title" style="margin-top:1.2rem;">Platforms I Specialize In:</div>
+      <div class="modal-desc">Instagram, TikTok, YouTube, Pinterest, Facebook, LinkedIn, X (Twitter), Threads, Google My Business</div>
+      <div class="modal-title" style="margin-top:1.2rem;">Industry</div>
+      <ul class="modal-list">
+        <li>Animals & pets</li>
+        <li>Beauty & cosmetics</li>
+        <li>Construction</li>
+        <li>Food & beverage</li>
+        <li>Health & wellness</li>
+        <li>Sports</li>
+        <li>Fitness</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Logo Design Modal -->
+  <div id="logoDesignModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal">
+      <button class="modal-close" onclick="closeLogoDesignModal()" aria-label="Close">&times;</button>
+      <div class="modal-title">Logo Design</div>
+      <div class="modal-desc">
+        I've been doing logos and T-shirt designs for 8 years, I've been making logos for many different companies around the world. I have designed more than 200 game logos, and 100 corporate or business logos. I provide idea support to more than 4 companies to indicate their design lines. In short, I am very experienced in this sector and if you have any questions, please contact me via message.
+      </div>
+    </div>
+  </div>
+
+  <!-- Brand Kit: Social Spark Modal -->
+  <div id="brandKitModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal" style="max-width:700px;">
+      <button class="modal-close" onclick="closeBrandKitModal()" aria-label="Close">&times;</button>
+      <div class="modal-title">Brand Kit: Social Spark (Social Media Management & Content Creation)</div>
+      <div class="modal-desc">This brand kit is designed to give your Social Media Management and Content Creation product a professional, engaging, and results-oriented identity. We'll leverage your existing "Jax of All Trades" brand colors while introducing specific elements that speak to social media growth and content expertise.</div>
+      <h3>1. Product Name & Tagline</h3>
+      <b>Product Name:</b> Social Spark<br>
+      <b>Tagline:</b> Ignite Your Online Presence.<br>
+      <div class="modal-desc" style="margin-bottom:1rem;">"Social" clearly defines the area, and "Spark" implies ignition, creativity, growth, and getting things started. It's energetic and memorable.<br>It's active, benefits-driven, and aligns with the "Spark" concept, promising visible results.</div>
+      <h3>2. Brand Core</h3>
+      <b>Mission:</b> To empower businesses to build vibrant, engaging, and effective social media presences through strategic management and compelling content, ultimately driving measurable growth.<br>
+      <b>Vision:</b> To be the trusted partner for businesses seeking to master their social media storytelling and unlock their full online potential.<br>
+      <b>Values:</b>
+      <ul class="modal-list">
+        <li>Engagement: Fostering genuine connections with audiences.</li>
+        <li>Creativity: Producing captivating and original content.</li>
+        <li>Strategy: Data-driven approaches for optimal results.</li>
+        <li>Consistency: Maintaining a steady, impactful online voice.</li>
+        <li>Transparency: Clear reporting and communication.</li>
+      </ul>
+      <b>Unique Selling Proposition (USP):</b> "Social Spark goes beyond basic posting. We fuse expert social media management with high-impact content creation, ensuring your brand not only gets seen but truly connects and converts."<br>
+      <b>Target Audience:</b>
+      <ul class="modal-list">
+        <li>Small to Medium Businesses (SMBs): Overwhelmed by social media, lack time or expertise.</li>
+        <li>Entrepreneurs/Solopreneurs: Need a professional online presence but don't have a dedicated marketing team.</li>
+        <li>Startups: Looking to build brand awareness and a community from scratch.</li>
+        <li>Businesses focused on online sales/leads: Need social media to drive traffic and conversions.</li>
+      </ul>
+      <h3>3. Visual Identity</h3>
+      <b>Logo Concept:</b>
+      <ul class="modal-list">
+        <li>Primary Icon: A stylized, abstract "S" or a combination of an "S" and a spark/flame/starburst. It could also incorporate subtle elements of a speech bubble or network connection.</li>
+        <li>Integration: This icon would sit alongside the "Social Spark" wordmark, using a font similar to or complementary to "Inter Bold" from your main brand.</li>
+        <li>Colors: Primarily use your Gold/Yellow accent (#FFD700 or #FFB300) as the primary color for the spark/icon, with Dark Blue (#14245C) or Dark Gray (#181818) for the text.</li>
+      </ul>
+      <b>Color Palette (Product Specific):</b>
+      <ul class="modal-list">
+        <li>Primary Accent: Gold/Amber (#FFB300 / #FFD700) - Carries over your existing strong accent, symbolizing energy, attention, and value.</li>
+        <li>Secondary Accent: A vibrant, but not overwhelming, Teal/Aqua (#00A3C9) - Represents communication, innovation, and digital connectivity. This adds a fresh, modern twist.</li>
+        <li>Neutrals: Leverage your existing Dark Gray (#181818) and Dark Blue (#14245C) for backgrounds, text, and supporting elements to maintain consistency with the main brand.</li>
+        <li>Highlight: White (#FFFFFF) for contrast and readability.</li>
+      </ul>
+      <b>Typography:</b>
+      <ul class="modal-list">
+        <li>Headings: Continue using Inter Bold or a similar strong, clean sans-serif for headlines (e.g., "Social Spark," "Ignite Your Online Presence").</li>
+        <li>Body Text: Continue using Inter Regular for readability in longer descriptions and social media captions.</li>
+        <li>Emphasis: Use bolding and perhaps a slightly larger size for key calls to action.</li>
+      </ul>
+      <b>Imagery & Iconography:</b>
+      <ul class="modal-list">
+        <li>Style: Clean, dynamic, and modern. Focus on aspirational themes and connection.</li>
+        <li>Themes: Connectivity, Growth, People/Community, Abstract Spark Elements.</li>
+        <li>Icons: Use a consistent set of line icons or flat icons that represent social media platforms, content types, and growth metrics.</li>
+      </ul>
+      <h3>4. Brand Voice & Messaging</h3>
+      <b>Tone of Voice:</b>
+      <ul class="modal-list">
+        <li>Enthusiastic & Energetic</li>
+        <li>Strategic & Insightful</li>
+        <li>Supportive & Empowering</li>
+        <li>Clear & Action-Oriented</li>
+      </ul>
+      <b>Key Messages & Taglines:</b>
+      <ul class="modal-list">
+        <li>Primary Tagline: "Social Spark: Ignite Your Online Presence."</li>
+        <li>"Stop scrolling, start shining. We build social strategies that captivate and convert."</li>
+        <li>"Your story, amplified. Expert content creation and social media management for real results."</li>
+        <li>"Gain followers, gain customers. Unlock consistent growth on social media."</li>
+        <li>Problem/Solution: "Tired of inconsistent posts and low engagement? Social Spark brings your brand to life online."</li>
+      </ul>
+      <h3>5. Brand Collateral (Product Specific)</h3>
+      <ul class="modal-list">
+        <li>Website Landing Page: A dedicated section on your website for "Social Spark" showcasing its features, benefits, case studies, and clear calls to action.</li>
+        <li>Social Media Profile Optimization: Cover Photos/Banners, Ad Graphics.</li>
+        <li>Content Templates: Social Post Templates, Blog Post Outline/Templates, Content Calendar Templates.</li>
+        <li>Productized Packages/Pricing Guides: Professionally designed PDFs or web pages outlining your Social Spark service tiers.</li>
+        <li>Case Study Templates: Focused on social media and content success stories.</li>
+        <li>Client Onboarding Documents: Welcome packets, questionnaires, and strategy brief templates.</li>
+      </ul>
+      <h3>6. Brand Guidelines (for Social Spark)</h3>
+      <ul class="modal-list">
+        <li>Logo Usage: Clear guidelines for the "Social Spark" logo, its icon, minimum size, and color variations.</li>
+        <li>Product Color Palette: Specific HEX codes for the gold/amber and teal accents, along with usage examples.</li>
+        <li>Typography: Which fonts to use for headlines and body text within Social Spark marketing materials.</li>
+        <li>Imagery Style: Examples of the type of photos and illustrations that align with the "Social Spark" brand.</li>
+        <li>Voice & Tone: Specific phrases or keywords to use, and those to avoid, when talking about "Social Spark."</li>
+      </ul>
+      <div class="modal-desc" style="margin-top:1.2rem;"></div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="testimonials-section">
+    <div style="max-width:900px; margin:0 auto;">
+      <div class="testimonials-section-title">What Clients Say</div>
+      <div class="testimonials-list">
+        <div class="testimonials-card">
+          <div class="testimonials-quote">“Jeremy is the real deal! He built my website and handled my SEO—my business has never been busier.”</div>
+          <div class="testimonials-author">— Sarah M., Ogden</div>
+        </div>
+        <div class="testimonials-card">
+          <div class="testimonials-quote">“Jeremy introduced me to a whole new world of technology and I am so grateful!”</div>
+          <div class="testimonials-author">— James Z. Sportamevents.com/blog, Salt Lake City</div>
+        </div>
+        <div class="testimonials-card">
+          <div class="testimonials-quote">“Jeremy’s logo and banner designs made my brand stand out. Highly recommend!”</div>
+          <div class="testimonials-author">— Scott K. utahprostatecancerrun.com, Murray</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="main-content">
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-title">Reporting Tool <span style="color:#888; font-weight:400;">Online</span></div>
+        <div><a href="#">Find out more</a></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Free Website <span style="color:#888; font-weight:400;">Analysis</span></div>
+        <div><a href="#">Tell Me Your Website</a></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Fixed & Transparent <span style="color:#888; font-weight:400;">Pricing</span></div>
+        <div><a href="#">Find out more</a></div>
+      </div>
+    </aside>
+    <main class="center-content">
+      <div class="card">
+        <div class="card-title">My Services</div>
+        <ul class="services-list">
+          <li><a href="#">Keyword, competitor & market analysis</a></li>
+          <li><a href="#">Home page optimisation</a></li>
+          <li><a href="#">Website source-code re-coding & content editing</a></li>
+          <li><a href="#">Unique targeted link building</a></li>
+          <li><a href="#">Article & blog writing</a></li>
+          <li><a href="#">Monthly search engine reports</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title"><a href="#blog" style="color:inherit; text-decoration:underline;">Latest News</a></div>
+        <ul class="news-list">
+          <li>Asia Caterer providers of hotel and hospitality jobs in Hong Kong and Singapore sign up for a new SEO campaign. <a href="#blog" style="color:#2a7ae2; text-decoration:underline;">Read More</a></li>
+          <li>Mobile SEO: If you're looking for a mobile SEO-optimised site after the recent Google algorithm changes <a href="#blog" style="color:#2a7ae2; text-decoration:underline;">Read More</a></li>
+          <li>Vibe Training, international providers of Insights Discovery and Human Synergistics accredited training sign up for our SEO campaign. <a href="#blog" style="color:#2a7ae2; text-decoration:underline;">Read More</a></li>
+        </ul>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-title">Quick Enquiry Form</div>
+        <form class="enquiry-form" action="https://formspree.io/f/mzzvpnzj" method="POST">
+          <input type="text" name="name" placeholder="name" required>
+          <input type="tel" name="tel" placeholder="tel" required>
+          <input type="email" name="email" placeholder="email" required>
+          <textarea name="enquiry" placeholder="enquiry" rows="3" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="card testimonials">
+        <div class="card-title">Testimonials</div>
+        <blockquote>"Significantly increased our exposure on the internet and new business."</blockquote>
+        <cite>- James Zwick, Director, Sportsamericaevents.com</cite>
+        <blockquote>"Jeremy LaFaver has got us to the top of Google for our main keywords."</blockquote>
+        <cite>- Satisfied Client</cite>
+      </div>
+    </aside>
+  </div>
+
+  <!-- BLOG SECTION -->
+  <section id="blog" class="blog-section">
+    <div style="max-width:900px; margin:0 auto;">
+      <div class="blog-section-title">Latest from the Blog</div>
+      <div class="blog-list">
+        <div class="blog-card">
+          <div class="blog-card-title">5 Ways to Boost Your Local SEO in 2025</div>
+          <div class="blog-card-desc">Simple strategies to get your business found by more local customers—fast.</div>
+          <a href="#" class="blog-card-link">Read More</a>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-title">How to Choose the Right Logo for Your Brand</div>
+          <div class="blog-card-desc">Tips and inspiration for creating a logo that stands out and tells your story.</div>
+          <a href="#" class="blog-card-link">Read More</a>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-title">Why Every Business Needs a Website in 2025</div>
+          <div class="blog-card-desc">Discover the benefits of a modern, mobile-friendly website for your business growth.</div>
+          <a href="#" class="blog-card-link">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANCED FEATURES SECTION -->
+  <section id="advanced" class="advanced-section">
+    <div style="max-width:900px; margin:0 auto;">
+      <div class="advanced-section-title">More Ways to Connect & Grow</div>
+      <div class="advanced-list">
+        <div class="advanced-card">
+          <div class="advanced-card-title">Find Me Locally</div>
+          <div class="advanced-card-desc">Serving Utah and surrounding areas. Visit my office or schedule a local consult.</div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.123456789!2d-111.876183!3d40.760779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzM5LjgiTiAxMTHCsDUyJzM0LjMiVw!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" width="100%" height="180" class="advanced-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="advanced-card">
+          <div class="advanced-card-title">Local Reviews</div>
+          <div class="advanced-card-desc">See what Utah clients are saying about my work on Google and Facebook.</div>
+          <a href="#" class="advanced-btn">Read Reviews</a>
+        </div>
+        <div class="advanced-card">
+          <div class="advanced-card-title">FAQ</div>
+          <div class="advanced-card-desc">Got questions? Check out my FAQ for answers about services, pricing, and more.</div>
+          <a href="#" class="advanced-btn">View FAQ</a>
+        </div>
+        <div class="advanced-card">
+          <div class="advanced-card-title">Newsletter Signup</div>
+          <div class="advanced-card-desc">Get tips, deals, and updates straight to your inbox. No spam, ever.</div>
+          <form action="#" method="POST" class="advanced-newsletter-form">
+            <input type="email" name="newsletter_email" placeholder="Your Email" required class="advanced-newsletter-input">
+            <button type="submit" class="advanced-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js" defer></script>
+</body>
+</html>

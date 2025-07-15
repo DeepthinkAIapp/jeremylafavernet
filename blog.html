@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeremy LaFaver Blog | Jax of All Trades</title>
+  <meta name="description" content="Tips, tutorials, and stories from Utah's Jax of All Trades. Web, tech, design, SEO, and more.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; background: #181818; color: #fff; margin: 0; }
+    .main-header { background: #181818; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2vw; min-height: 70px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); }
+    .header-logo img { height: 60px; width: auto; display: block; }
+    .header-nav { display: flex; align-items: center; gap: 2rem; }
+    .header-nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 1.08rem; letter-spacing: 0.01em; position: relative; padding: 0.2rem 0.5rem; transition: color 0.2s; }
+    .header-nav a:hover { color: #ffd700; }
+    .header-cta { background: #ffb300; color: #181818; font-weight: 700; font-size: 1.05rem; border: none; border-radius: 22px; padding: 0.7rem 2.2rem; cursor: pointer; text-decoration: none; transition: background 0.2s, color 0.2s; margin-left: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: inline-block; }
+    .header-cta:hover { background: #ffd700; color: #181818; }
+    .blog-hero { background: linear-gradient(90deg, #232323 60%, #181818 100%); color: #ffd700; text-align: center; padding: 3rem 0 2rem 0; }
+    .blog-hero-title { font-size: 2.7rem; font-weight: 900; margin-bottom: 0.7rem; letter-spacing: 0.01em; }
+    .blog-hero-desc { font-size: 1.2rem; color: #fff; margin-bottom: 1.2rem; }
+    .blog-main { display: flex; max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem; gap: 2.5rem; }
+    .blog-posts { flex: 3 1 0; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+    .blog-card { background: #232323; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); padding: 1.2rem; display: flex; flex-direction: column; transition: transform 0.15s; }
+    .blog-card:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
+    .blog-card img { width: 100%; border-radius: 8px; margin-bottom: 0.7rem; }
+    .blog-card-title { font-weight: 700; color: #ffd700; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .blog-card-date { font-size: 0.95rem; color: #bbb; margin-bottom: 0.5rem; }
+    .blog-card-snippet { font-size: 1rem; color: #fff; margin-bottom: 1rem; }
+    .blog-card a { color: #ffd700; text-decoration: underline; font-weight: 700; align-self: flex-start; }
+    .blog-sidebar { flex: 1 1 260px; background: #232323; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); padding: 2rem 1.2rem; height: fit-content; }
+    .blog-sidebar-title { font-size: 1.1rem; font-weight: 700; color: #ffd700; margin-bottom: 1rem; }
+    .blog-search { width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid #bbb; margin-bottom: 1.5rem; font-size: 1rem; background: #181818; color: #fff; }
+    .blog-categories, .blog-tags { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
+    .blog-categories li, .blog-tags li { margin-bottom: 0.7rem; }
+    .blog-categories a, .blog-tags a { color: #ffd700; text-decoration: none; font-size: 1rem; }
+    .blog-categories a:hover, .blog-tags a:hover { text-decoration: underline; }
+    .footer { background: #232323; color: #fff; text-align: center; padding: 2rem 1rem 1rem 1rem; border-radius: 32px 32px 0 0; margin-top: 3rem; }
+    @media (max-width: 900px) { .blog-main { flex-direction: column; gap: 1.5rem; } }
+    @media (max-width: 600px) { .main-header { flex-direction: column; align-items: stretch; padding: 0.5rem 1vw; } .header-logo { justify-content: center; margin-bottom: 0.5rem; } .header-nav { flex-wrap: wrap; gap: 0.7rem; } .header-cta { margin: 0.7rem auto 0 auto; display: block; width: 100%; } .blog-main { padding: 1rem 0.2rem; } }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-logo">
+      <img src="images/logo/logomain.png" alt="Jeremy LaFaver Logo">
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">HOME</a>
+      <a href="blog.html">BLOG</a>
+      <a href="#">PRODUCTS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="#">CONTACT</a>
+    </nav>
+    <a href="#" class="header-cta" onclick="window.location='mailto:jeremy@jeremylafaver.net';return false;">EMAIL ME</a>
+  </header>
+
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="blog-hero-title">Jeremy's Blog</div>
+    <div class="blog-hero-desc">Fresh insights, tutorials, and stories from Utah’s Jax of All Trades.<br>Web, tech, design, SEO, and more.</div>
+  </section>
+
+  <main class="blog-main">
+    <!-- Blog Posts -->
+    <section class="blog-posts">
+      <div class="blog-grid" id="posts-grid">
+        <!-- Placement Blog Post Cards -->
+        <a href="seo-local-2025.html" class="blog-card" style="text-decoration:none; color:inherit;">
+          <img src="images/pexels-goumbik-669619.jpg" alt="Local SEO" class="blog-card-img" />
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">5 Ways to Boost Your Local SEO in 2025</h3>
+            <div class="blog-card-date">July 2025</div>
+            <div class="blog-card-snippet">Simple strategies to get your business found by more local customers—fast.</div>
+            <div class="blog-card-tags"><span class='tag'>SEO</span> <span class='tag'>Local</span></div>
+          </div>
+        </a>
+        <a href="logo-brand-2025.html" class="blog-card" style="text-decoration:none; color:inherit;">
+          <img src="images/pexels-karolina-grabowska-5717760.jpg" alt="Logo Design" class="blog-card-img" />
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">How to Choose the Right Logo for Your Brand</h3>
+            <div class="blog-card-date">June 2025</div>
+            <div class="blog-card-snippet">Tips and inspiration for creating a logo that stands out and tells your story.</div>
+            <div class="blog-card-tags"><span class='tag'>Branding</span> <span class='tag'>Design</span></div>
+          </div>
+        </a>
+        <a href="website-benefits-2025.html" class="blog-card" style="text-decoration:none; color:inherit;">
+          <img src="images/pexels-kindelmedia-7688336.jpg" alt="Websites" class="blog-card-img" />
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Why Every Business Needs a Website in 2025</h3>
+            <div class="blog-card-date">May 2025</div>
+            <div class="blog-card-snippet">Discover the benefits of a modern, mobile-friendly website for your business growth.</div>
+            <div class="blog-card-tags"><span class='tag'>Web Design</span> <span class='tag'>Business</span></div>
+          </div>
+        </a>
+        <a href="content-marketing-2025.html" class="blog-card" style="text-decoration:none; color:inherit;">
+          <img src="images/pexels-marketingtuig-185576.jpg" alt="Content Marketing" class="blog-card-img" />
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Content Marketing That Works</h3>
+            <div class="blog-card-date">April 2025</div>
+            <div class="blog-card-snippet">How to create content that ranks, engages, and converts.</div>
+            <div class="blog-card-tags"><span class='tag'>Content</span> <span class='tag'>Marketing</span></div>
+          </div>
+        </a>
+        <!-- Blog post cards will be injected here by JavaScript -->
+      </div>
+    </section>
+    <!-- Sidebar -->
+    <aside class="blog-sidebar">
+      <div class="blog-sidebar-title">Search</div>
+      <input type="text" class="blog-search" placeholder="Search blog...">
+      <div class="blog-sidebar-title">Categories</div>
+      <ul class="blog-categories">
+        <li><a href="#">SEO</a></li>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Tech Tips</a></li>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">Content Marketing</a></li>
+        <li><a href="#">Photo Repair</a></li>
+      </ul>
+      <div class="blog-sidebar-title">Tags</div>
+      <ul class="blog-tags" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <li><a href="#">#utah</a></li>
+        <li><a href="#">#seo</a></li>
+        <li><a href="#">#webdev</a></li>
+        <li><a href="#">#design</a></li>
+        <li><a href="#">#ai</a></li>
+        <li><a href="#">#repair</a></li>
+        <li><a href="#">#branding</a></li>
+        <li><a href="#">#content</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div>&copy; 2025 DEEPTHINK TECHNOLOGIES. All rights reserved.</div>
+  </footer>
+
+  <!-- Blog post rendering script -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/front-matter@4.0.2/dist/front-matter.min.js"></script>
+  <script>
+  // List of markdown files (static for static hosting)
+  const posts = [
+    'posts/2025-07-14-seo-tips.md',
+    'posts/2025-06-30-web-design-trends.md',
+    'posts/2025-05-20-social-media-growth.md',
+  ];
+
+  async function fetchAndRenderPosts() {
+    const container = document.getElementById('posts-grid');
+    if (!container) return;
+    // container.innerHTML = '';
+    for (const postPath of posts) {
+      try {
+        const res = await fetch(postPath);
+        if (!res.ok) continue;
+        const md = await res.text();
+        const parsed = window.frontMatter(md);
+        const html = marked.parse(parsed.body);
+        // Use frontmatter for metadata
+        const { title, date, image, tags, summary } = parsed.attributes;
+        const tagHtml = tags ? tags.map(tag => `<span class='tag'>${tag}</span>`).join(' ') : '';
+        container.innerHTML += `
+          <article class="blog-card">
+            <img src="${image || ''}" alt="${title}" class="blog-card-img" />
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">${title}</h3>
+              <div class="blog-card-date">${date}</div>
+              <div class="blog-card-snippet">${summary || ''}</div>
+              <div class="blog-card-tags">${tagHtml}</div>
+              <div class="blog-card-body" style="display:none;">${html}</div>
+            </div>
+          </article>
+        `;
+      } catch (e) {
+        console.error('Error loading post', postPath, e);
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', fetchAndRenderPosts);
+  </script>
+</body>
+</html> 
