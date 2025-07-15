@@ -45,7 +45,9 @@
   <style>
     body { font-family: 'Inter', Arial, sans-serif; background: #181818; color: #fff; margin: 0; }
     .main-header { background: #181818; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2vw; min-height: 70px; }
-    .header-logo img { height: 60px; width: auto; display: block; }
+    .header-logo { display: flex; align-items: center; gap: 0.5rem; }
+    .header-logo-img { height: 60px; width: auto; display: block; }
+    .header-logo-text { font-size: 1.5rem; font-weight: 700; color: #ffd700; }
     .header-nav { display: flex; align-items: center; gap: 2rem; }
     .header-nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 1.08rem; letter-spacing: 0.01em; position: relative; padding: 0.2rem 0.5rem; transition: color 0.2s; }
     .header-nav a:hover { color: #ffd700; }
@@ -66,7 +68,8 @@
 <body>
   <header class="main-header">
     <div class="header-logo">
-      <img src="images/logo/logomain.png" alt="Jeremy LaFaver Logo">
+      <a href="index.html"><img src="images/logo/logomain.png" alt="Jeremy LaFaver Logo" class="header-logo-img"></a>
+      <span class="header-logo-text">JAX OF ALL TRADES</span>
     </div>
     <nav class="header-nav">
       <a href="blog.html">BLOG</a>
