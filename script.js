@@ -111,4 +111,11 @@ window.addEventListener('DOMContentLoaded', function() {
       openBrandKitModal();
     });
   }
-}); 
+});
+
+function openFaqModal() {
+  document.getElementById('faqModalBackdrop').style.display = 'flex';
+}
+function closeFaqModal() {
+  document.getElementById('faqModalBackdrop').style.display = 'none';
+} 

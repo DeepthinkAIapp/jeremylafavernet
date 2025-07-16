@@ -467,64 +467,9 @@
         </div>
       </div>
     </div>
-  </section>
-  <div class="main-content">
-    <aside class="sidebar">
-      <div class="card">
-        <div class="card-title">Reporting Tool <span style="color:#888; font-weight:400;">Online</span></div>
-        <div><a href="#">Find out more</a></div>
-      </div>
-      <div class="card">
-        <div class="card-title">Free Website <span style="color:#888; font-weight:400;">Analysis</span></div>
-        <div><a href="#">Tell Me Your Website</a></div>
-      </div>
-      <div class="card">
-        <div class="card-title">Fixed & Transparent <span style="color:#888; font-weight:400;">Pricing</span></div>
-        <div><a href="#">Find out more</a></div>
-      </div>
-    </aside>
-    <main class="center-content">
-      <div class="card">
-        <div class="card-title">My Services</div>
-        <ul class="services-list">
-          <li><a href="#">Keyword, competitor & market analysis</a></li>
-          <li><a href="#">Home page optimisation</a></li>
-          <li><a href="#">Website source-code re-coding & content editing</a></li>
-          <li><a href="#">Unique targeted link building</a></li>
-          <li><a href="#">Article & blog writing</a></li>
-          <li><a href="#">Monthly search engine reports</a></li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card-title"><a href="#blog" style="color:inherit; text-decoration:underline;">Latest News</a></div>
-        <ul class="news-list">
-          <li>Asia Caterer providers of hotel and hospitality jobs in Hong Kong and Singapore sign up for a new SEO campaign. <a href="#blog" style="color:#2a7ae2; text-decoration:underline;">Read More</a></li>
-          <li>Mobile SEO: If you're looking for a mobile SEO-optimised site after the recent Google algorithm changes <a href="#blog" style="color:#2a7ae2; text-decoration:underline;">Read More</a></li>
-          <li>Vibe Training, international providers of Insights Discovery and Human Synergistics accredited training sign up for our SEO campaign. <a href="#blog" style="color:#2a7ae2; text-decoration:underline;">Read More</a></li>
-        </ul>
-      </div>
-    </main>
-    <aside class="sidebar">
-      <div class="card">
-        <div class="card-title">Quick Enquiry Form</div>
-        <form class="enquiry-form" action="https://formspree.io/f/mzzvpnzj" method="POST">
-          <input type="text" name="name" placeholder="name" required>
-          <input type="tel" name="tel" placeholder="tel" required>
-          <input type="email" name="email" placeholder="email" required>
-          <textarea name="enquiry" placeholder="enquiry" rows="3" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-      <div class="card testimonials">
-        <div class="card-title">Testimonials</div>
-        <blockquote>"Significantly increased our exposure on the internet and new business."</blockquote>
-        <cite>- James Zwick, Director, Sportsamericaevents.com</cite>
-        <blockquote>"Jeremy LaFaver has got us to the top of Google for our main keywords."</blockquote>
-        <cite>- Satisfied Client</cite>
-      </div>
-    </aside>
-  </div>
-
+  </section
+    
+  
   <!-- BLOG SECTION -->
   <section id="blog" class="blog-section">
     <div style="max-width:900px; margin:0 auto;">
@@ -533,17 +478,17 @@
         <div class="blog-card">
           <div class="blog-card-title">5 Ways to Boost Your Local SEO in 2025</div>
           <div class="blog-card-desc">Simple strategies to get your business found by more local customers—fast.</div>
-          <a href="#" class="blog-card-link">Read More</a>
+          <a href="seo-local-2025.html" class="blog-card-link">Read More</a>
         </div>
         <div class="blog-card">
           <div class="blog-card-title">How to Choose the Right Logo for Your Brand</div>
           <div class="blog-card-desc">Tips and inspiration for creating a logo that stands out and tells your story.</div>
-          <a href="#" class="blog-card-link">Read More</a>
+          <a href="logo-brand-2025.html" class="blog-card-link">Read More</a>
         </div>
         <div class="blog-card">
           <div class="blog-card-title">Why Every Business Needs a Website in 2025</div>
           <div class="blog-card-desc">Discover the benefits of a modern, mobile-friendly website for your business growth.</div>
-          <a href="#" class="blog-card-link">Read More</a>
+          <a href="website-benefits-2025.html" class="blog-card-link">Read More</a>
         </div>
       </div>
     </div>
@@ -562,12 +507,12 @@
         <div class="advanced-card">
           <div class="advanced-card-title">Local Reviews</div>
           <div class="advanced-card-desc">See what Utah clients are saying about my work on Google and Facebook.</div>
-          <a href="#" class="advanced-btn">Read Reviews</a>
+          <button class="advanced-btn" onclick="document.getElementById('testimonials').scrollIntoView({behavior: 'smooth'});">Read Reviews</button>
         </div>
         <div class="advanced-card">
           <div class="advanced-card-title">FAQ</div>
           <div class="advanced-card-desc">Got questions? Check out my FAQ for answers about services, pricing, and more.</div>
-          <a href="#" class="advanced-btn">View FAQ</a>
+          <button class="advanced-btn" onclick="openFaqModal()">View FAQ</button>
         </div>
         <div class="advanced-card">
           <div class="advanced-card-title">Newsletter Signup</div>
@@ -580,6 +525,35 @@
       </div>
     </div>
   </section>
+  <!-- FAQ MODAL POPUP -->
+  <div id="faqModalBackdrop" class="modal-backdrop" style="display:none;">
+    <div class="modal">
+      <button class="modal-close" onclick="closeFaqModal()" aria-label="Close">&times;</button>
+      <div class="modal-title">Frequently Asked Questions</div>
+      <div class="modal-faq-list">
+        <div class="modal-faq-item">
+          <div class="modal-faq-q"><b>What services do you offer?</b></div>
+          <div class="modal-faq-a">SEO, web development, computer repair, graphic design, social media management, and more.</div>
+        </div>
+        <div class="modal-faq-item">
+          <div class="modal-faq-q"><b>How do I get a quote?</b></div>
+          <div class="modal-faq-a">Click 'Get a Free Quote' or contact me directly via phone or email.</div>
+        </div>
+        <div class="modal-faq-item">
+          <div class="modal-faq-q"><b>Do you offer price matching?</b></div>
+          <div class="modal-faq-a">Yes! I will match any price for all my services.</div>
+        </div>
+        <div class="modal-faq-item">
+          <div class="modal-faq-q"><b>Where are you located?</b></div>
+          <div class="modal-faq-a">Based in Utah, serving clients Worldwide.</div>
+        </div>
+        <div class="modal-faq-item">
+          <div class="modal-faq-q"><b>How fast can you deliver?</b></div>
+          <div class="modal-faq-a">Most projects are completed quickly—often within hours, depending on scope.</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="script.js" defer></script>
 </body>
 </html>
